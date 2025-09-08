@@ -1,0 +1,5 @@
+# Configuração do banco de dados para produção
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://servidor_producao:3306/sistema_chaves_prod?useSSL=false&serverTimezone=UTC
+db.username=usuario_prod
+db.password=senha_prod

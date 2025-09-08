@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox fx:id="root" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dc_vb.sgc.controller.LoginController">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/Logotipo.png" />
+            </image>
+        </ImageView>
+        <VBox fx:id="loginContainer">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+                <VBox>
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" />
+                        <TextField />
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
+                        <PasswordField />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</VBox>
