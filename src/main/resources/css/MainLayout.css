@@ -1,0 +1,28 @@
+#root {
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 720px;
+	/*-fx-alignment: center;*/
+	-fx-fill-width: false;
+}
+
+#sidebar {
+    -fx-pref-width: 280px;
+	-fx-background-color: white;
+	-fx-padding: 12px;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 24px, 0, 5px, 0);
+}
+
+#header, #mainContent {
+    -fx-pref-width: 1640px;
+}
+
+#header {
+    -fx-pref-height: 140px;
+	-fx-background-color: white;
+	-fx-padding: 12px;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 24px, 0, 5px, 5px);
+}
+
+#mainContent {
+    -fx-pref-height: 920px;
+}

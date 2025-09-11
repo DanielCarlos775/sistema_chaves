@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="root" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="sidebar" />
+      <VBox fx:id="mainContent">
+         <children>
+            <HBox fx:id="header" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
