@@ -1,21 +1,23 @@
-CREATE TABLE IF NOT EXISTS coordenador_professor (
-    id_coordenador_professor INT AUTO_INCREMENT PRIMARY KEY,
-    id_coordenador INT NOT NULL COMMENT 'ID do coordenador (usuário)',
-    id_professor INT NOT NULL COMMENT 'ID do professor vinculado',
-    data_vinculacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Data da vinculação',
-    ativo TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
-
-    CONSTRAINT fk_coordenador FOREIGN KEY (id_coordenador)
-        REFERENCES usuarios (id_usuario)
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION,
-
-    CONSTRAINT fk_professor FOREIGN KEY (id_professor)
-        REFERENCES professores (id_professor)
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION,
-
-    CONSTRAINT unique_coordenador_professor UNIQUE (id_coordenador, id_professor)
-) ENGINE=InnoDB
-DEFAULT CHARSET=utf8mb4
-COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE agendamentos (
+  id_agendamento int NOT NULL AUTO_INCREMENT,
+  id_sala int NOT NULL,
+  id_usuario_solicitante int NOT NULL COMMENT 'Quem fez o agendamento (ADM, COORDENADOR ou ADMINISTRATIVO)',
+  id_professor int DEFAULT NULL COMMENT 'Beneficiário: se for um professor',
+  id_pessoa_autorizada int DEFAULT NULL COMMENT 'Beneficiário: se for uma pessoa autorizada',
+  data_inicial date NOT NULL,
+  data_final date NOT NULL,
+  periodo enum('MANHA','TARDE','NOITE','INTEGRAL') COLLATE utf8mb4_unicode_ci NOT NULL,
+  observacoes text COLLATE utf8mb4_unicode_ci,
+  status enum('ATIVO','CANCELADO','CONCLUIDO') COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  data_criacao timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  data_atualizacao timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id_agendamento),
+  KEY fk_agendamento_usuario1_idx (`id_usuario_solicitante`),
+  KEY fk_agendamento_pessoa_autorizada1_idx (`id_pessoa_autorizada`),
+  KEY fk_agendamento_sala_idx (id_sala),
+  KEY fk_agendamento_professor_idx (id_professor),
+  CONSTRAINT fk_agendamento_pessoa_autorizada1 FOREIGN KEY (`id_pessoa_autorizada`) REFERENCES `pessoas_autorizadas` (`id_pessoa`),
+  CONSTRAINT fk_agendamento_professor` FOREIGN KEY (`id_professor`) REFERENCES `professores` (`id_professor`),
+  CONSTRAINT fk_agendamento_sala` FOREIGN KEY (`id_sala`) REFERENCES `salas` (`id_sala`),
+  CONSTRAINT fk_agendamento_usuario_solicitante` FOREIGN KEY (`id_usuario_solicitante`) REFERENCES `usuarios` (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
