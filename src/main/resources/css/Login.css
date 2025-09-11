@@ -1,6 +1,6 @@
 #root {
-	-fx-pref-width: 1920px;
-	-fx-pref-height: 1080px;
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 720px;
 	-fx-background-image: url('../img/Chave_Background.jpg');
 	-fx-alignment: center;
 	-fx-fill-width: false;
