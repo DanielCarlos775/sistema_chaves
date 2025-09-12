@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS movimentacoes (
   FOREIGN KEY (id_usuario_guarita) REFERENCES usuarios(id_usuario),
   FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
   FOREIGN KEY (id_professor) REFERENCES professores(id_professor),
-  FOREIGN KEY (id_pessoa) REFERENCES pessoa_autorizada(id_pessoa),
+  FOREIGN KEY (id_pessoa) REFERENCES pessoas_autorizadas(id_pessoa),
   FOREIGN KEY (id_biometria) REFERENCES biometria(id_biometria),
 
   CHECK (

@@ -24,15 +24,19 @@ public class ConnectionFactory {
         config.setMaxLifetime(Long.parseLong(EnvReader.get("db.pool.maxLifetime")));
         config.setConnectionTimeout(Long.parseLong(EnvReader.get("db.pool.connectionTimeout")));
 
+        //Driver
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
+        //Inicializa pool
         dataSource = new HikariDataSource(config);
     }
 
+    //Metodo para pegar conexão
     public static Connection getConnection() throws SQLException {
         return dataSource.getConnection();
     }
 
+    //Metodo para encerrar pool (chamado no shutdown da aplicação)
     public static void close() {
         if (dataSource != null && !dataSource.isClosed()) {
             dataSource.close();
