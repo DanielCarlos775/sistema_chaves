@@ -33,13 +33,15 @@ public class UsuarioDAO {
         }
     }
 
-    // FIND BY EMAIL (para verificar se já existe no cadastro)
-    public Usuario findByEmail(String email) throws SQLException {
-        String sql = "SELECT id_usuario, nome, email, senha, tipo_usuario FROM usuarios WHERE email = ?";
+    // =======================
+    // FINDERS
+    // =======================
+
+    // Buscar usuário por ID
+    public Usuario findById(int id) throws SQLException {
+        String sql = "SELECT id_usuario nome, email, senha, tipo_usuario FROM usuarios WHERE id_usuario = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-
-            stmt.setString(1, email);
-
+            stmt.setInt(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     return mapUsuario(rs);
@@ -49,24 +51,21 @@ public class UsuarioDAO {
         return null;
     }
 
-    // FIND BY EMAIL + SENHA (autenticação de login)
-    public Usuario findByEmailAndSenha(String email, String senha) throws SQLException {
-        String sql = "SELECT id_usuario, nome, email, senha, tipo_usuario FROM usuarios WHERE email = ? AND senha = ?";
+    // Buscar usuário pelo Email
+    public Usuario findByEmail(String email) throws SQLException {
+        String sql = "SELECT id_usuario nome, email, senha, tipo_usuario FROM usuarios WHERE email = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-
             stmt.setString(1, email);
-            stmt.setString(2, senha); // OBS: em produção, compare hash da senha
-
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     return mapUsuario(rs);
                 }
             }
         }
-        return null; // login inválido
+        return null;
     }
 
-    // LIST ALL
+    // Listar todos
     public List<Usuario> list() throws SQLException {
         List<Usuario> usuarios = new ArrayList<>();
         String sql = "SELECT id_usuario, nome, email, senha, tipo_usuario FROM usuarios";
@@ -80,7 +79,11 @@ public class UsuarioDAO {
         return usuarios;
     }
 
-    // UPDATE
+    // =======================
+    // UPDATES
+    // =======================
+
+    // Atualizar dados gerais (menos senha)
     public void update(Usuario usuario) throws SQLException {
         String sql = "UPDATE usuarios SET nome = ?, email = ?, senha = ?, tipo_usuario = ? WHERE id_usuario = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
@@ -94,6 +97,20 @@ public class UsuarioDAO {
         }
     }
 
+    // Atualizar somente a senha
+    public boolean updateSenha(Usuario usuario) throws SQLException {
+        String sql = "UPDATE usuarios SET senha = ? WHERE id_usuario = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, usuario.getSenha());
+            stmt.setInt(2, usuario.getId());
+            int rows = stmt.executeUpdate();
+            return rows > 0;
+        }
+    }
+
+    // =======================
+    // DELETE
+    // =======================
     public void delete(int id) throws SQLException {
         String sql = "DELETE FROM usuarios WHERE id_usuario = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
@@ -102,6 +119,9 @@ public class UsuarioDAO {
         }
     }
 
+    // =======================
+    // MAPPER
+    // =======================
     //Metodo auxiliar para mapear ResultSet -> Usuario
     private Usuario mapUsuario(ResultSet rs) throws SQLException {
         Usuario usuario = new Usuario();
