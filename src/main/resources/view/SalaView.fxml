@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.dc_vb.sgc.controller.SalaController">
+    <top>
+        <ToolBar>
+            <Button onAction="#handleAdd" text="Adicionar" />
+            <Button onAction="#handleEdit" text="Editar" />
+            <Button onAction="#handleDelete" text="Excluir" />
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="tableSalas">
+            <columns>
+                <TableColumn fx:id="colId_sala" text="ID" />
+                <TableColumn fx:id="colNome" text="Nome" />
+                <TableColumn fx:id="colId_Predio" text="Predio" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
