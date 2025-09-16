@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.dc_vb.sgc.controller.ChaveController">
+    <top>
+        <ToolBar>
+            <Button text="Adicionar" onAction="#handleAdd"/>
+            <Button text="Editar" onAction="#handleEdit"/>
+            <Button text="Excluir" onAction="#handleDelete"/>
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="tableChave">
+            <columns>
+                <TableColumn text="ID" fx:id="colId"/>
+                <TableColumn text="Identificador" fx:id="colIdentificador"/>
+                <TableColumn text="Sala ID" fx:id="colSalaId"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
