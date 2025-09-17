@@ -26,7 +26,7 @@ public class TesteUsuarioDAO {
             System.out.println("Usuário cadastrado com sucesso!");
 
             // 2. Testar login
-            Usuario logado = usuarioDAO.findByEmailAndSenha("daniel4@email.com", "123456");
+            Usuario logado = usuarioDAO.findByEmail("daniel4@email.com");
             if (logado != null) {
                 System.out.println("Login OK: " + logado.getNome() + " | Tipo: " + logado.getTipoUsuario());
             } else {
