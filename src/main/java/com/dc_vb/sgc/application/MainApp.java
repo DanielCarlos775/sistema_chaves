@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -13,7 +14,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/MainLayout.fxml"));
             Scene scene = new Scene(parent);
 
 //            Define caraterísticas da janela
