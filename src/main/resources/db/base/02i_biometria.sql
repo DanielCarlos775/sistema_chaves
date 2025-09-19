@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS biometria (
 
   FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
   FOREIGN KEY (id_professor) REFERENCES professores(id_professor),
-  FOREIGN KEY (id_pessoa) REFERENCES pessoa_autorizada(id_pessoa),
+  FOREIGN KEY (id_pessoa) REFERENCES pessoas_autorizadas(id_pessoa),
 
   CHECK (
     (id_usuario IS NOT NULL AND id_professor IS NULL AND id_pessoa IS NULL) OR

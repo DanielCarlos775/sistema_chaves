@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS salas (
     nome VARCHAR(100) NOT NULL COMMENT 'Nome ou número da sala (ex: 101, Laboratório 1)',
     descricao TEXT NULL COMMENT 'Descrição adicional sobre a sala',
     capacidade INT NULL COMMENT 'Capacidade máxima da sala (em pessoas)',
-    ativo TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
+    ativo BOOLEAN NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Data de criação do registro',
     data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data da última atualização',
 

@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     tipo_usuario ENUM('ADM', 'COORDENADOR', 'ADMINISTRATIVO', 'GUARITA') NOT NULL COMMENT 'Tipo do usuário no sistema',
     id_predio INT NULL COMMENT 'Prédio de trabalho (caso aplicável)',
     id_sala INT NULL COMMENT 'Sala de trabalho (se aplicável - usado por administrativos)',
-    ativo TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
+    ativo BOOLEAN NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Data de criação do registro',
     data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data da última atualização',
 

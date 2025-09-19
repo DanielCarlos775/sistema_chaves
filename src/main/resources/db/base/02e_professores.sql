@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS professores (
     email VARCHAR(100) NULL COMMENT 'Email do professor',
     telefone VARCHAR(20) NULL COMMENT 'Telefone de contato',
     cpf VARCHAR(20) NOT NULL UNIQUE COMMENT 'CPF do professor, usado como identificação única',
-    ativo TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
+    ativo BOOLEAN NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Data de criação do registro',
     data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data da última atualização'
 ) ENGINE=InnoDB

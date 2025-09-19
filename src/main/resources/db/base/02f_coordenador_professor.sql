@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS coordenador_professor (
     id_coordenador INT NOT NULL COMMENT 'ID do coordenador (usuário)',
     id_professor INT NOT NULL COMMENT 'ID do professor vinculado',
     data_vinculacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Data da vinculação',
-    ativo TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
+    ativo BOOLEAN NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
 
     CONSTRAINT fk_coordenador FOREIGN KEY (id_coordenador)
         REFERENCES usuarios (id_usuario)

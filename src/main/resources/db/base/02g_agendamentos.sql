@@ -17,7 +17,7 @@ CREATE TABLE agendamentos (
   KEY fk_agendamento_sala_idx (id_sala),
   KEY fk_agendamento_professor_idx (id_professor),
   CONSTRAINT fk_agendamento_pessoa_autorizada1 FOREIGN KEY (`id_pessoa_autorizada`) REFERENCES `pessoas_autorizadas` (`id_pessoa`),
-  CONSTRAINT fk_agendamento_professor` FOREIGN KEY (`id_professor`) REFERENCES `professores` (`id_professor`),
-  CONSTRAINT fk_agendamento_sala` FOREIGN KEY (`id_sala`) REFERENCES `salas` (`id_sala`),
-  CONSTRAINT fk_agendamento_usuario_solicitante` FOREIGN KEY (`id_usuario_solicitante`) REFERENCES `usuarios` (`id_usuario`)
+  CONSTRAINT fk_agendamento_professor FOREIGN KEY (`id_professor`) REFERENCES `professores` (`id_professor`),
+  CONSTRAINT fk_agendamento_sala FOREIGN KEY (`id_sala`) REFERENCES `salas` (`id_sala`),
+  CONSTRAINT fk_agendamento_usuario_solicitante FOREIGN KEY (`id_usuario_solicitante`) REFERENCES `usuarios` (`id_usuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS pessoas_autorizadas (
     cpf VARCHAR(20) NOT NULL UNIQUE COMMENT 'CPF da pessoa autorizada',
     telefone VARCHAR(20) NULL COMMENT 'Telefone de contato',
     email VARCHAR(100) NULL COMMENT 'Email para contato',
-    ativo TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
+    ativo BOOLEAN NOT NULL DEFAULT 1 COMMENT '1=Ativo, 0=Inativo',
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Data de criação do registro',
     data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data da última atualização',
 
