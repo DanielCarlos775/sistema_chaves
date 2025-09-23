@@ -14,10 +14,10 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/view/MainLayout.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
             Scene scene = new Scene(parent);
 
-//            Define caraterísticas da janela
+            // Define caraterísticas da janela
             stage.setTitle("Sistema de Gerenciamento de Chaves");
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/Favicon.png")));
 
