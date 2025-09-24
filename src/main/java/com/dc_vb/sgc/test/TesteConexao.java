@@ -1,4 +1,4 @@
-package com.dc_vb.sgc.test;
+/*package com.dc_vb.sgc.test;
 
 import com.dc_vb.sgc.config.DatabaseConfig;
 import java.sql.Connection;
@@ -17,3 +17,4 @@ public class TesteConexao {
         }
     }
 }
+*/

@@ -5,10 +5,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DatabaseConfig {
+/*public class DatabaseConfig {
 
     private static final Dotenv dotenv = Dotenv.configure()
-            .filename(".env")
+            .filename(".env.dev")
             .load();
 
     private static final String URL = "jdbc:mysql://" +
@@ -23,3 +23,4 @@ public class DatabaseConfig {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
+*/
