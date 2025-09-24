@@ -53,7 +53,7 @@ public class UsuarioDAO {
 
     // Buscar usuário pelo Email
     public Usuario findByEmail(String email) throws SQLException {
-        String sql = "SELECT id_usuario nome, email, senha, tipo_usuario FROM usuarios WHERE email = ?";
+        String sql = "SELECT id_usuario, nome, email, senha, tipo_usuario FROM usuarios WHERE email = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, email);
             try (ResultSet rs = stmt.executeQuery()) {
