@@ -30,7 +30,7 @@
                         <PasswordField fx:id="passwordInput" />
                     </children>
                 </VBox>
-            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" text="Button" />
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" text="Enviar" />
             </children>
         </VBox>
       <Button mnemonicParsing="false" onAction="#closeApp" text="Fechar" />
