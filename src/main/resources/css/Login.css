@@ -1,6 +1,6 @@
+@import "Global.css"
+
 #root {
-	-fx-pref-width: 1280px;
-	-fx-pref-height: 720px;
 	-fx-background-image: url('../img/Chave_Background.jpg');
 	-fx-alignment: center;
 	-fx-fill-width: false;
@@ -14,4 +14,8 @@
 	-fx-spacing: 8px;
 	-fx-padding: 12px;
 	-fx-alignment: top-center;
+}
+
+#errorText {
+    -fx-color: -color-error;
 }

@@ -1,0 +1,8 @@
+#root {
+    -color-error: #FF294E;
+    -color-success: #29FF50;
+
+
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 720px;
+}
