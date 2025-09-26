@@ -3,6 +3,7 @@ package com.dc_vb.sgc.controller;
 import com.dc_vb.sgc.dao.UsuarioDAO;
 import com.dc_vb.sgc.model.Usuario;
 import com.dc_vb.sgc.service.AuthService;
+import com.dc_vb.sgc.util.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -60,4 +61,8 @@ public class RegistrarController {
         }
     }
 
+    @FXML
+    void handleGoToLogin(ActionEvent event) {
+        SceneManager.loadScene("Login");
+    }
 }
