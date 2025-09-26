@@ -12,6 +12,7 @@
       <TextField fx:id="emailInput" layoutX="10.0" layoutY="10.0" promptText="email" />
       <PasswordField fx:id="passwordInput" promptText="senha" />
       <Button mnemonicParsing="false" onAction="#handleRegister" text="Criar" />
+      <Button layoutX="34.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleGoToLogin" text="Voltar para o Login" />
    </children>
    <padding>
       <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
