@@ -6,11 +6,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox style="-fx-spacing: 12;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dc_vb.sgc.controller.RegistrarController">
+<VBox prefHeight="486.0" prefWidth="501.0" style="-fx-spacing: 12;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dc_vb.sgc.controller.RegistrarController">
    <children>
-      <TextField fx:id="nameInput" promptText="nome" />
-      <TextField fx:id="emailInput" layoutX="10.0" layoutY="10.0" promptText="email" />
-      <PasswordField fx:id="passwordInput" promptText="senha" />
+      <TextField fx:id="nameInput" promptText="Nome" />
+      <TextField fx:id="inputCPF" promptText="CPF" />
+      <TextField fx:id="inputTelefone" promptText="Telefone" />
+      <TextField fx:id="emailInput" layoutX="10.0" layoutY="10.0" promptText="Email" />
+      <TextField fx:id="tipoUsuarioInput" promptText="Tipo de Usuário" />
+      <TextField fx:id="predioInput" promptText="Prédio" />
+      <TextField fx:id="inputSala" promptText="Sala" />
+      <PasswordField fx:id="passwordInput" promptText="Senha" />
       <Button mnemonicParsing="false" onAction="#handleRegister" text="Criar" />
       <Button layoutX="34.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleGoToLogin" text="Voltar para o Login" />
    </children>

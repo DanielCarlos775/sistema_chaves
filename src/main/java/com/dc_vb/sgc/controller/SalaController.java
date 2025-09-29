@@ -1,18 +1,8 @@
 package com.dc_vb.sgc.controller;
 
-import com.dc_vb.sgc.dao.SalaDAO;
-import com.dc_vb.sgc.model.Salas;
-import com.dc_vb.sgc.util.ConnectionFactory;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
+//import com.dc_vb.sgc.dao.SalaDAO;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.List;
-
-public class SalaController {
+/*public class SalaController {
 
     @FXML private TableView<Salas> tableSalas;
     @FXML private TableColumn<Salas, Integer> colId_sala;
@@ -64,4 +54,4 @@ public class SalaController {
             }
         }
     }
-}
+}*/

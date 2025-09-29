@@ -1,5 +1,7 @@
 package com.dc_vb.sgc.application;
 
+import com.dc_vb.sgc.dao.UsuarioDAO;
+import com.dc_vb.sgc.model.Usuario;
 import com.dc_vb.sgc.util.SceneManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -36,3 +38,18 @@ public class MainApp extends Application {
         launch(args);
     }
 }
+
+/*public class MainApp {
+    public static void main(String[] args) {
+        UsuarioDAO dao = new UsuarioDAO();
+
+        // Inserir exemplo
+        Usuario novo = new Usuario(0, "Daniel", "daniel4@email.com", "123456", "COORDENADOR");
+        dao.insert(novo);
+
+        // Listar todos
+        for (Usuario u : dao.findAll()) {
+            System.out.println(u.getId() + " - " + u.getNome() + " - " + u.getEmail());
+        }
+    }
+}*/

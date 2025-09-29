@@ -6,7 +6,7 @@ import com.dc_vb.sgc.model.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class TesteUsuarioDAO {
+/*public class TesteUsuarioDAO {
 
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/sistema_chaves";
@@ -37,4 +37,4 @@ public class TesteUsuarioDAO {
             e.printStackTrace();
         }
     }
-}
+}*/

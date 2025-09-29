@@ -1,18 +1,9 @@
 package com.dc_vb.sgc.controller;
 
-import com.dc_vb.sgc.dao.ChaveDAO;
-import com.dc_vb.sgc.model.Chaves;
-import com.dc_vb.sgc.util.ConnectionFactory;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
+//import com.dc_vb.sgc.dao.ChaveDAO;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.List;
 
-public class ChaveController {
+/*public class ChaveController {
 
     @FXML private TableView<Chaves> tableChave;
     @FXML private TableColumn<Chaves, Integer> colId;
@@ -64,4 +55,4 @@ public class ChaveController {
             }
         }
     }
-}
+}*/
