@@ -1,3 +1,7 @@
+### Environment ###
+.env
+.env.dev
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
