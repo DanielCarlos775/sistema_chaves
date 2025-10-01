@@ -8,6 +8,7 @@
 }
 
 #loginContainer {
+    -fx-min-width: 250px;
 	-fx-background-radius: 12px;
 	-fx-background-color: white;
 	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 24px, 0px, -5px, 5px);
@@ -17,5 +18,5 @@
 }
 
 #errorText {
-    -fx-color: -color-error;
+    -fx-fill: -fx-color-error;
 }
