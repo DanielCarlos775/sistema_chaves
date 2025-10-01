@@ -2,7 +2,6 @@
 
 Um aplicativo para controlar a retirada e devolução de chaves, com controle de possessão por assinatura digital.
 
----
 ## Fluxo
 
 Atualmente um colaborador que retira a chave precisa:
