@@ -1,6 +1,6 @@
-.env
-.env.dev
-db/config.properties
+src/main/resources/.env
+src/main/resources/.env.dev
+src/main/resources/db/config.properties
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
