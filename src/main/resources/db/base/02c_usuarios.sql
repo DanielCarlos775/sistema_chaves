@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     nome VARCHAR(100) NOT NULL COMMENT 'Nome completo do usuário',
     email VARCHAR(100) NOT NULL UNIQUE COMMENT 'Email para login e contato',
     senha VARCHAR(255) NOT NULL COMMENT 'Hash da senha (usar SHA2 ou bcrypt na aplicação)',
+    senha_alterada BOOLEAN NOT NULL DEFAULT FALSE,
     tipo_usuario ENUM('ADM', 'COORDENADOR', 'ADMINISTRATIVO', 'GUARITA') NOT NULL COMMENT 'Tipo do usuário no sistema',
     id_predio INT NULL COMMENT 'Prédio de trabalho (caso aplicável)',
     id_sala INT NULL COMMENT 'Sala de trabalho (se aplicável - usado por administrativos)',
