@@ -1,16 +1,16 @@
 @import "Global.css"
 
-.sgc-button {
+.sgc-input {
     -fx-text-fill: #ffffff;
     -fx-background-color: -fx-color-primary;
     // -fx-width: 250px:
     -fx-fit-to-width: true;
 }
 
-.sgc-button:hover {
+.sgc-input:hover {
     -fx-background-color: -fx-color-primary-hover;
 }
 
-.sgc-button:active {
+.sgc-input:active {
     -fx-background-color: -fx-color-primary-active;
 }

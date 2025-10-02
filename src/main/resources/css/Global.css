@@ -1,5 +1,9 @@
 // Cria variáveis na raíz do documento
 :root {
+    -fx-color-primary: #9F740B;
+    -fx-color-primary-hover: #DAA010;
+    -fx-color-primary-active: #FFC928;
+
     -fx-color-error: #FF294E;
     -fx-color-success: #29FF50;
 }
