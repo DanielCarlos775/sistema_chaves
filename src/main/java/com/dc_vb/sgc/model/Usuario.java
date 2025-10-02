@@ -1,6 +1,6 @@
 package com.dc_vb.sgc.model;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class Usuario {
     private int idUsuario;
@@ -8,28 +8,30 @@ public class Usuario {
     private String email;
     private String senha;
     private String tipoUsuario;
-    private int idPredio;
-    private int idSala;
+    private Integer idPredio;
+    private Integer idSala;
     private boolean ativo;
-    private Timestamp dataCriacao;
-    private Timestamp dataAtualizacao;
+    private boolean senhaAlterada;
+    private LocalDateTime dataCriacao;
+    private LocalDateTime dataAtualizacao;
 
     public Usuario(){}
 
     // Construtor Para Insert (sem id / datas geradas no banco)
-    public Usuario(String nome, String email, String senha, String tipoUsuario, int idPredio, int idSala, boolean ativo) {
+    public Usuario(String nome, String email, String senha, String tipoUsuario, Integer idPredio, Integer idSala) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.tipoUsuario = tipoUsuario;
         this.idPredio = idPredio;
         this.idSala = idSala;
-        this.ativo = ativo;
+        this.ativo = true;
+        this.senhaAlterada = false;
     }
 
     // Getters e Setters
     public int getIdUsuario() { return idUsuario; }
-    public void setIdUsuario(int id) { this.idUsuario = idUsuario; }
+    public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
 
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
@@ -43,20 +45,23 @@ public class Usuario {
     public String getTipoUsuario() { return tipoUsuario; }
     public void setTipoUsuario(String tipoUsuario) { this.tipoUsuario = tipoUsuario; }
 
-    public int getIdPredio() { return idPredio; }
-    public void setIdPredio(int idPredio) { this.idPredio = idPredio; }
+    public Integer getIdPredio() { return idPredio; }
+    public void setIdPredio(Integer idPredio) { this.idPredio = idPredio; }
 
-    public int getIdSala() { return idSala; }
-    public void setIdSala(int idSala) { this.idSala = idSala; }
+    public Integer getIdSala() { return idSala; }
+    public void setIdSala(Integer idSala) { this.idSala = idSala; }
 
     public boolean isAtivo() { return ativo; }
     public void setAtivo(boolean ativo) { this.ativo = ativo; }
 
-    public Timestamp getDataCriacao() { return dataCriacao; }
-    public void setDataCriacao(Timestamp dataCriacao) { this.dataCriacao = dataCriacao; }
+    public boolean isSenhaAlterada() { return senhaAlterada; }
+    public void setSenhaAlterada(boolean senhaAlterada) { this.senhaAlterada = senhaAlterada; }
 
-    public Timestamp getDataAtualizacao() { return dataAtualizacao; }
-    public void setDataAtualizacao(Timestamp dataAtualizacao) { this.dataAtualizacao = dataAtualizacao; }
+    public LocalDateTime getDataCriacao() { return dataCriacao; }
+    public void setDataCriacao(LocalDateTime dataCriacao) { this.dataCriacao = dataCriacao; }
+
+    public LocalDateTime getDataAtualizacao() { return dataAtualizacao; }
+    public void setDataAtualizacao(LocalDateTime dataAtualizacao) { this.dataAtualizacao = dataAtualizacao; }
 
     @Override
     public String toString() {

@@ -1,6 +1,6 @@
 package com.dc_vb.sgc.util;
 
-import org.mindrot.jbcrypt.BCrypt;
+/*import org.mindrot.jbcrypt.BCrypt;
 
 public final class PasswordHasher {
 
@@ -20,4 +20,4 @@ public final class PasswordHasher {
             return false;
         return BCrypt.checkpw(plain, hashed);
     }
-}
+}*/
