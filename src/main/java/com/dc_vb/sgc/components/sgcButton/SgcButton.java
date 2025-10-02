@@ -7,7 +7,7 @@ public class SgcButton extends Button {
 
     public SgcButton() {
         super("Button");
-        // Apply default styling, etc.
+
         this.getStyleClass().add("sgc-button");
 
             String styleSheetPath = "/css/components/SgcButton.css";
@@ -16,7 +16,6 @@ public class SgcButton extends Button {
             this.getStylesheets().add(cssPath);
         } catch (NullPointerException e) {
             System.err.println("ERROR: Could not find stylesheet resource at path: " + styleSheetPath);
-            // Handle error or ensure pathing is correct
         }
     }
 }
