@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-<?import com.dc_vb.sgc.components.sgcButton.SgcButton?>
 
 <VBox fx:id="root" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dc_vb.sgc.controller.LoginController">
     <children>
@@ -34,7 +33,7 @@
                     </children>
                 </VBox>
             <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                <SgcButton fx:id="loginButton" mnemonicParsing="false" text="Enviar" onAction="#handleLogin" />
+                <Button fx:id="loginButton" mnemonicParsing="false" text="Enviar" onAction="#handleLogin" />
             <FlowPane prefWrapLength="0.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta? " />
