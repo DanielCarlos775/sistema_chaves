@@ -32,16 +32,16 @@
                         <PasswordField fx:id="passwordInput" />
                     </children>
                 </VBox>
-            <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" text="Enviar" />
-            <FlowPane prefWrapLength="0.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta? " />
-                  <Hyperlink onAction="#handleGoToRegister" text="Cadastre-se" />
-               </children>
-            </FlowPane>
+                <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button onAction="#handleLogin" text="Enviar" />
+                <FlowPane prefWrapLength="0.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta? " />
+                        <Hyperlink onAction="#handleGoToRegister" text="Cadastre-se" />
+                    </children>
+                </FlowPane>
             </children>
         </VBox>
-      <Button mnemonicParsing="false" onAction="#closeApp" text="Fechar" />
+        <Button mnemonicParsing="false" onAction="#closeApp" text="Fechar" />
     </children>
 </VBox>

@@ -6,7 +6,6 @@ import com.dc_vb.sgc.service.AuthService;
 import com.dc_vb.sgc.util.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -21,6 +20,9 @@ public class LoginController {
 
     @FXML private Text errorText;
 
+    @FXML void initialize() {
+        errorText.setText("");
+    }
 
     @FXML
     void handleLogin(ActionEvent event) {
