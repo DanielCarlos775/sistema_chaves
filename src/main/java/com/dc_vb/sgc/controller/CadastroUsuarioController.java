@@ -1,16 +1,19 @@
 package com.dc_vb.sgc.controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import com.dc_vb.sgc.model.Usuario;
 import com.dc_vb.sgc.service.UsuarioService;
-import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class CadastroUsuarioController {
 
+    @FXML private Button btnCadastrar;
     @FXML private TextField nomeInput;
+    @FXML private TextField cpfInput;
+    @FXML private TextField predioInput;
+    @FXML private TextField salaInput;
+    @FXML private TextField telefoneInput;
     @FXML private TextField emailInput;
     @FXML private PasswordField senhaInput;
     @FXML private ComboBox<String> tipoUsuarioCombo;
@@ -32,15 +35,17 @@ public class CadastroUsuarioController {
                     emailInput.getText(),
                     senhaInput.getText(),
                     tipoUsuarioCombo.getValue(),
-                    null, // id_predio ainda não tratado na tela
-                    null  // id_sala ainda não tratado
+                    null,
+                    null
             );
 
             usuarioService.cadastrarUsuario(novo);
             mensagemLabel.setText("Usuário cadastrado com ID: " + novo.getIdUsuario());
+            mensagemLabel.setStyle("-fx-text-fill: green;");
 
         } catch (Exception e) {
             mensagemLabel.setText("Erro: " + e.getMessage());
+            mensagemLabel.setStyle("-fx-text-fill: red;");
         }
     }
 }
