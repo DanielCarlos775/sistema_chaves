@@ -29,7 +29,8 @@ public class MainController {
 
     @FXML
     private void GotoCadastrarUsuario(ActionEvent event) {
-        try {
+        loadComponent("CadastroUsuario");
+        /*try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/dc_vc/sgc/view/CadastroUsuario.fxml"));
             Parent root = loader.load();
 
@@ -40,7 +41,7 @@ public class MainController {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     private void loadComponent(String componentName) {
