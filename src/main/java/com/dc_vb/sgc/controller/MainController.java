@@ -29,7 +29,7 @@ public class MainController {
 
     @FXML
     private void GotoCadastrarUsuario(ActionEvent event) {
-        loadComponent("CadastroUsuario");
+        loadComponent("CadastroGeral");
         /*try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/dc_vc/sgc/view/CadastroUsuario.fxml"));
             Parent root = loader.load();
