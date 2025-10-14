@@ -1,0 +1,15 @@
+@import "../Global.css"
+
+.sgc-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: -fx-color-primary;
+    -fx-border-radius: 4px;
+}
+
+.sgc-input:hover {
+    //-fx-background-color: -fx-color-primary-hover;
+}
+
+.sgc-input:focused {
+    -fx-background-color: -fx-color-primary;
+}
