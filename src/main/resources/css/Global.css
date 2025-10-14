@@ -8,8 +8,34 @@
     -fx-color-success: #29FF50;
 }
 
+#root {
+    -fx-background-color: #ffffff;
+}
+
+Hyperlink {
+    -fx-text-fill: -fx-color-primary;
+    -fx-underline: true;
+}
+
+Hyperlink:visited {
+    -fx-text-fill: -fx-color-primary-hover;
+}
+
 // Aplica estilos no container com id "root"
 #root {
 	-fx-pref-width: 1280px;
 	-fx-pref-height: 720px;
+}
+
+.error-text {
+    -fx-fill: -fx-color-error;
+    -fx-text-fill: -fx-color-error;
+}
+
+.error-border {
+    -fx-border-color: -fx-color-error;
+}
+
+.h1 {
+   -fx-font-size: 24px;
 }
