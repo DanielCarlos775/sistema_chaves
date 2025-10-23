@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dc_vb.sgc.controller.MainController">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <children>
@@ -18,21 +19,21 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/Logotipo.png" />
+                        <Image url="@../assets/img/Logotipo.png" />
                      </image>
                   </ImageView>
                   <Pane prefHeight="15.0" prefWidth="718.0" />
-                  <Button mnemonicParsing="false" text="Retirar Chave">
+                  <Button mnemonicParsing="false" styleClass="sgc-button" text="Retirar Chave">
                      <HBox.margin>
                         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Guardar Chave">
+                  <Button mnemonicParsing="false" styleClass="sgc-button" text="Guardar Chave">
                      <HBox.margin>
                         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Isso e Aquilo">
+                  <Button mnemonicParsing="false" styleClass="sgc-button" text="Isso e Aquilo">
                      <HBox.margin>
                         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                      </HBox.margin>
@@ -43,26 +44,30 @@
                 <children>
                   <VBox fx:id="sidebar" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Dashboard">
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#loadDashboard" styleClass="sgc-button" text="Dashboard">
                            <VBox.margin>
                               <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                            </VBox.margin>
                         </Button>
-                        <Button layoutX="73.0" layoutY="94.0" mnemonicParsing="false" text="Cadastros">
+                        <Button layoutX="73.0" layoutY="94.0" mnemonicParsing="false" styleClass="sgc-button" text="Cadastros">
                            <VBox.margin>
                               <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                            </VBox.margin>
                         </Button>
-                        <Button layoutX="73.0" layoutY="144.0" mnemonicParsing="false" text="Configurações">
+                        <Button layoutX="73.0" layoutY="144.0" mnemonicParsing="false" styleClass="sgc-button" text="Configurações">
                            <VBox.margin>
                               <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                            </VBox.margin>
                         </Button>
-                        <Button layoutX="73.0" layoutY="193.0" mnemonicParsing="false" text="Relatórios">
+                        <Button layoutX="73.0" layoutY="193.0" mnemonicParsing="false" styleClass="sgc-button" text="Relatórios">
                            <VBox.margin>
                               <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
                            </VBox.margin>
                         </Button>
+                        <Pane VBox.vgrow="ALWAYS" />
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" styleClass="sgc-button" text="Sair" />
                      </children>
                   </VBox>
                   <VBox fx:id="contentPane" HBox.hgrow="ALWAYS" />
@@ -70,7 +75,7 @@
             </HBox>
                 <HBox fx:id="statusBar" prefWidth="1280.0" VBox.vgrow="NEVER">
                     <children>
-                        <Label fx:id="systemStatus" text="System Status: Ready">
+                        <Label fx:id="systemStatus" text="Status do Sistema: Pronto">
                             <HBox.margin>
                                 <Insets left="20.0" />
                             </HBox.margin>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
@@ -14,34 +16,43 @@
     <children>
         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../img/Logotipo.png" />
+                <Image url="@../assets/img/Logotipo.png" />
             </image>
         </ImageView>
         <VBox fx:id="loginContainer">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
-                <VBox>
-                    <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" />
-                        <TextField fx:id="usernameInput" />
-                    </children>
-                </VBox>
-                <VBox>
-                    <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
-                        <PasswordField fx:id="passwordInput" />
-                    </children>
-                </VBox>
-                <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" />
-            <Button onAction="#handleLogin" text="Enviar" />
-                <FlowPane prefWrapLength="0.0">
-                    <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta? " />
-                        <Hyperlink onAction="#handleGoToRegister" text="Cadastre-se" />
-                    </children>
-                </FlowPane>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h1" text="Login" />
+            <VBox fx:id="formContainer">
+               <children>
+                      <VBox>
+                          <children>
+                        <Label fx:id="emailLabel" text="Email" />
+                              <TextField fx:id="emailInput" styleClass="sgc-input" />
+                            <Text fx:id="errorTextEmail" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" text="Erro Email" />
+                          </children>
+                      </VBox>
+                      <VBox>
+                          <children>
+                        <Label fx:id="passwordLabel" text="Senha" />
+                              <PasswordField fx:id="passwordInput" styleClass="sgc-input" />
+                        <Text fx:id="errorTextPassword" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" text="Erro Senha" />
+                          </children>
+                      </VBox>
+                  <Button onAction="#handleLogin" text="Enviar">
+                     <styleClass>
+                        <String fx:value="sgc-button" />
+                        <String fx:value="login-button" />
+                     </styleClass></Button>
+               </children>
+            </VBox>
             </children>
         </VBox>
+      <HBox alignment="CENTER">
+         <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Esqueceu sua senha?" />
+                  <Hyperlink onAction="#handleGoToRegister" text="Recuperar!" />
+         </children>
+      </HBox>
         <Button mnemonicParsing="false" onAction="#closeApp" text="Fechar" />
     </children>
 </VBox>

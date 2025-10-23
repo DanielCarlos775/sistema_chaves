@@ -1,16 +1,20 @@
-@import "Global.css"
+@import "../Global.css"
 
 .sgc-button {
-    -fx-text-fill: #ffffff;
-    -fx-background-color: -fx-color-primary;
-    // -fx-width: 250px:
-    -fx-fit-to-width: true;
+    -fx-background-radius: 100px;
+    -fx-pref-width: 240px;
+    //-fx-padding: 4px 12px 4px 12px;
 }
 
-.sgc-button:hover {
+.login-button {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: -fx-color-primary;
+}
+
+.login-button:hover {
     -fx-background-color: -fx-color-primary-hover;
 }
 
-.sgc-button:active {
+.login-button:pressed {
     -fx-background-color: -fx-color-primary-active;
 }
